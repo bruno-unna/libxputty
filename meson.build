@@ -9,5 +9,5 @@ project = module.add_project('configure',
     ]
 )
 
-xputty_dep = project.dependency('xputty')
+xputty_dep = project.dependency('xputty').as_link_whole()
 meson.override_dependency('xputty', xputty_dep, static: true)
